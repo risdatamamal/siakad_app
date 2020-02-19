@@ -17,7 +17,161 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).canvasColor,
-      drawer: Drawer(
+      drawer: Theme(
+        data: Theme.of(context).copyWith(
+          canvasColor: Color(0xffF5F8FA)
+        ),
+        child: Drawer(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                  InkWell(
+                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SettingPage())),
+                    child: DrawerHeader(
+                      padding: EdgeInsets.zero,
+                      child: Container(
+                        alignment: Alignment.center,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            CircleAvatar(
+                              radius: 30,
+                              backgroundColor: Colors.blue,
+                            ),
+                            SizedBox(width: 10,),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text("Riski Meydiansyah", style: TextStyle(
+                                  color: Theme.of(context).accentColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'PT_Sans'
+                                ),),
+                                Text("meydiansyah2@esaunggul.ac.id", style: TextStyle(
+                                  color: Theme.of(context).highlightColor.withOpacity(0.4),
+                                  fontFamily: 'PT_Sans'
+                                ),)
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 50,),
+                  Container(
+                    height: 50,
+                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    child: InkWell(
+                      onTap: () => print("Tap"),
+                      highlightColor: Colors.transparent,
+                      child: Stack(
+                        children: <Widget>[
+                          Container(
+                            height: 50,
+                            width: double.infinity,
+                            color: Colors.white,
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            alignment: Alignment.centerLeft,
+                            child: Text("Home", style: TextStyle(
+                                fontFamily: 'PT_Sans',
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold
+                            ),),
+                          ),
+                          Container(
+                            width: 5,
+                            color: Theme.of(context).accentColor,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    child: InkWell(
+                      onTap: () => print("Tap"),
+                      highlightColor: Colors.transparent,
+                      child: Container(
+                        height: 50,
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        alignment: Alignment.centerLeft,
+                        child: Text("Data", style: TextStyle(
+                          fontFamily: 'PT_Sans',
+                          fontSize: 16,
+                        ),),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    child: InkWell(
+                      onTap: () => print("Tap"),
+                      highlightColor: Colors.transparent,
+                      child: Container(
+                        height: 50,
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        alignment: Alignment.centerLeft,
+                        child: Text("Perkuliahan", style: TextStyle(
+                          fontFamily: 'PT_Sans',
+                          fontSize: 16,
+                        ),),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    child: InkWell(
+                      onTap: () => print("Tap"),
+                      highlightColor: Colors.transparent,
+                      child: Container(
+                        height: 50,
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        alignment: Alignment.centerLeft,
+                        child: Text("Daftar Nilai", style: TextStyle(
+                          fontFamily: 'PT_Sans',
+                          fontSize: 16,
+                        ),),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    child: InkWell(
+                      onTap: () => print("Tap"),
+                      highlightColor: Colors.transparent,
+                      child: Container(
+                        height: 50,
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        alignment: Alignment.centerLeft,
+                        child: Text("Registrasi Mahasiswa", style: TextStyle(
+                          fontFamily: 'PT_Sans',
+                          fontSize: 16,
+                        ),),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                alignment: Alignment.center,
+                child: Text("SIAKAD\nUniversitas Esa Unggul", textAlign: TextAlign.center, style: TextStyle(color: Theme.of(context).highlightColor.withOpacity(0.4)),),
+              )
+            ],
+          ),
+        ),
       ),
       body: CustomScrollView(
         slivers: <Widget>[

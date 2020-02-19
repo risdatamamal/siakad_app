@@ -1,4 +1,5 @@
 import 'package:dsc_app/page/home.dart';
+import 'package:dsc_app/page/student/login.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
@@ -34,7 +35,7 @@ class _SplashState extends State<Splash> {
     return SplashScreen(
       loaderColor: Theme.of(context).highlightColor,
       backgroundColor: Theme.of(context).canvasColor,
-      navigateAfterSeconds: HomePage(),
+      navigateAfterSeconds: Login(),
       seconds: 3,
       loadingText: Text("Universitas Esa Unggul"),
       title: Text("SIAKAD", style: TextStyle(
